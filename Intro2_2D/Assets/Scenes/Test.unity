@@ -617,41 +617,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: activatorsTags.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: activatorsTags.Array.data[0]
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: activatorsTags.Array.data[1]
-      value: Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
       propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 209213571}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 11404216, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
-      propertyPath: onActivate.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce9da40810a49045a9e4c9ebd9b2045, type: 3}
 --- !u!1001 &877838077
@@ -780,10 +748,6 @@ PrefabInstance:
     - target: {fileID: 178010, guid: 30cb0e4ffcab18d4ca8a516b86a23867, type: 3}
       propertyPath: m_Name
       value: Stage_Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 178010, guid: 30cb0e4ffcab18d4ca8a516b86a23867, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 401198, guid: 30cb0e4ffcab18d4ca8a516b86a23867, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1434,10 +1398,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 912430281, guid: c67696763a27ec14ab14de47f6d41c2a, type: 3}
-      propertyPath: fireSpeed
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 912430282, guid: c67696763a27ec14ab14de47f6d41c2a, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Target
