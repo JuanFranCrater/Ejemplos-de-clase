@@ -467,6 +467,7 @@ GameObject:
   - component: {fileID: 1356539763}
   - component: {fileID: 1356539765}
   - component: {fileID: 1356539764}
+  - component: {fileID: 1356539766}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -548,7 +549,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_textAlignment: 520
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -614,6 +615,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356539762}
   m_CullTransparentMesh: 0
+--- !u!114 &1356539766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356539762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1acf1d2873781b4da57ec9083951ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoAEscribir: Pues esto es un texto largo para poder probar esta tonteria de script
+    que me esta llevando tanto tiempo de hacer, por que no recordaba como usar las
+    corrutinas en unity
+  textMeshpro: {fileID: 1356539764}
 --- !u!1 &2005702903
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +667,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class InicioScriptManager : MonoBehaviour
+public class InicioScriptManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    
-    private void OnMouseOver()
+       public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Music");
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PauseMusic();
     }
-    private void OnMouseExit()
+
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Music Stop");
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
     }
 }

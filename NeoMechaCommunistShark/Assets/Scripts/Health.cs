@@ -50,6 +50,10 @@ public class Health : MonoBehaviour
     public void Die()
     {
         onDie.Invoke();
+        if (gameObject.tag.Equals("Baddies"))
+        {
+            GameControl.instance.addScore(100);
+        }
     }
 
     public void DestroyObj()

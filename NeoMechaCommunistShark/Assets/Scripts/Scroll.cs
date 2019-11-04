@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D cuerpo;
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.velocity = new Vector2(GameControl.instance.scrollSpeed, 0);
+        cuerpo = GetComponent<Rigidbody2D>();
+        cuerpo.velocity = new Vector2(GameControl.instance.scrollSpeed, 0);
     }
 
-    void Update()
+    void FixedUpdate()
     {    
         if (GameControl.instance.gameOver == true)
         {
-            rigidbody.velocity = Vector2.zero;
+            cuerpo.velocity = Vector2.zero;
         }
     }
     private void OnBecameInvisible()

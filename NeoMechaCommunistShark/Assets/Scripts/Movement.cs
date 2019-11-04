@@ -10,8 +10,25 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+        if (MouseScreenCheck())
+        {
+            mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+        }
+        else
+        {
+            GameControl.instance.pausar();
+        }
+    }
+    public bool MouseScreenCheck()
+    {
+        float mouseX = Input.mousePosition.x;
+        float mouseY = Input.mousePosition.y;
+        float screenX = Screen.width;
+        float screenY = Screen.height;
+
+        return (!(mouseX < 0 || mouseX > screenX || mouseY < 0 || mouseY > screenY));
+          
     }
 }

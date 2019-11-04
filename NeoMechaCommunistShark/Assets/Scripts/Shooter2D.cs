@@ -13,7 +13,7 @@ public class Shooter2D : MonoBehaviour
 	[Header ("IA")]
 	public bool hasIA;
 
-	void Update()
+	void FixedUpdate()
 	{
 		if(hasIA)
 		{
