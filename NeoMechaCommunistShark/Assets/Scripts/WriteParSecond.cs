@@ -7,8 +7,8 @@ public class WriteParSecond : MonoBehaviour
 {
     public string textoAEscribir;
    public TextMeshProUGUI textMeshpro;
-       char[] textoAEscribirPorCaracter;
-    int position = 0;
+    int position = 0;   
+    char[] textoAEscribirPorCaracter;
     // Update is called once per frame
     private void Awake()
     {
