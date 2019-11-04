@@ -23,8 +23,5 @@ public class Scroll : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    private void OnBecameVisible()
-    {
-        Debug.Log("Estoy en camara");
-    }
+   
 }

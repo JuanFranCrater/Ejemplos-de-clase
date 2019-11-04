@@ -12,6 +12,6 @@ public class AlLimite : MonoBehaviour
     }
     void generar()
     {
-        Instantiate(myPrefab, new Vector3(transform.position.x + 4, transform.position.y, transform.position.z), Quaternion.identity);
+        Instantiate(myPrefab, new Vector3(transform.position.x + 20, transform.position.y, transform.position.z), Quaternion.identity);
     }
 }

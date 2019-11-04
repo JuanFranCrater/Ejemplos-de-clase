@@ -10,14 +10,25 @@ public class Shoting : MonoBehaviour
     private bool _canShoot = true;
     private float _shootTimer;
     public string fireAxis;
-    // Update is called once per frame
+    private Animator _anim;
+    private void Awake()
+    {
+        _anim = GetComponent<Animator>();
+    }
     void Update()
     {
         if (_canShoot && (Input.GetAxis(fireAxis) > 0))
         {
+
+            _anim.SetBool("shoot", true);
             Instantiate(bulletPrefab, bulletStart.position, bulletStart.rotation);
             _canShoot = false;
             _shootTimer += 1 / fireSpeed;
+        }
+        else
+        {
+            if(Input.GetAxis(fireAxis) <= 0)
+            _anim.SetBool("shoot", false);
         }
         if (!_canShoot)
         {
@@ -28,13 +39,5 @@ public class Shoting : MonoBehaviour
             }
         }
     }
-    void upgradedGun(int typeGun)
-    {
-        switch (typeGun)
-        {
-            default:
-                fireSpeed = fireSpeed * 2;
-                break;
-        }
-    }
+  
 }
