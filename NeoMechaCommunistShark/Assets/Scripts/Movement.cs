@@ -16,10 +16,6 @@ public class Movement : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
         }
-        else
-        {
-            GameControl.instance.pausar();
-        }
     }
     public bool MouseScreenCheck()
     {

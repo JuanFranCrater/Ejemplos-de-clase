@@ -17,11 +17,29 @@ public class Shoting : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetMouseButtonUp(1)&& GameControl.instance.hasBoom)
+        {
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("Baddies").Length; i++)
+                GameObject.FindGameObjectsWithTag("Baddies")[i].GetComponent<Health>().Die(); ;
+            GameControl.instance.hasBoom = false;
+        }
+
         if (_canShoot && (Input.GetAxis(fireAxis) > 0))
         {
-
+            float y = bulletStart.position.y;
+            float x = bulletStart.position.x;
             _anim.SetBool("shoot", true);
-            Instantiate(bulletPrefab, bulletStart.position, bulletStart.rotation);
+            if (GameControl.instance.hasTriple)
+            {
+                
+                Instantiate(bulletPrefab, bulletStart.position, bulletStart.rotation);
+                Instantiate(bulletPrefab, new Vector3(x,y+0.6f), bulletStart.rotation);
+                Instantiate(bulletPrefab, new Vector3(x, y - 0.6f), bulletStart.rotation);
+            }
+            else
+            {
+                Instantiate(bulletPrefab, bulletStart.position, bulletStart.rotation);
+            }
             _canShoot = false;
             _shootTimer += 1 / fireSpeed;
         }

@@ -7,8 +7,10 @@ public class GameControl : MonoBehaviour
 {
     public static GameControl instance;            
 
-    private int score = 0;                        
-    public bool gameOver = false;                
+    private int score = 0;
+    public bool hasBoom = false;
+    public bool hasTriple = false;
+    public bool gameOver = false;
     public float scrollSpeed = -1.5f;
 
 
@@ -19,13 +21,19 @@ public class GameControl : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
     }
-    public void pausar()
-    { 
-
-    }
 
     internal void addScore(int puntos)
     {
         score = score + puntos;
+    }
+
+    internal void setBoom(bool v)
+    {
+        hasBoom = v;
+    }
+
+    internal void setTypeBullet(bool v)
+    {
+        hasTriple = v;
     }
 }
