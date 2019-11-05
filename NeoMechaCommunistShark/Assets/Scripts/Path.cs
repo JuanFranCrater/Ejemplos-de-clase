@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using Random = UnityEngine.Random;
+
 public class Path : MonoBehaviour
 {
     public float speed;
@@ -12,12 +14,11 @@ public class Path : MonoBehaviour
     private Vector3 targetPos;
     public GameObject[] listadoPositiones;
     public GameObject positionDissapear;
-
     private void Awake()
     {
-        inititalPos = listadoPositiones[Random.Range(0,1)].transform.position;
-        mediumPos = listadoPositiones[Random.Range(2, 4)].transform.position;
-        finalPos = listadoPositiones[Random.Range(5, 6)].transform.position;
+        inititalPos = listadoPositiones[Random.Range(0, 2)].transform.position;
+        mediumPos = listadoPositiones[Random.Range(2, 5)].transform.position;
+        finalPos = listadoPositiones[Random.Range(6, 7)].transform.position;
     }
     void Start()
     {
