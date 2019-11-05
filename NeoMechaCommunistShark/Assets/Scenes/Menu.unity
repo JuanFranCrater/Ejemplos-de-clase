@@ -581,7 +581,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
+  m_BackGroundColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -706,6 +706,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52b9265e8948d1249911b58c92441e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &773939104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9139735804291489080, guid: 4810d80a53d1f9e42ae6091209756221,
+    type: 3}
+  m_PrefabInstance: {fileID: 9139735805570799908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &773939105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773939104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8879a322a0bf3f43a62d302c0f2cbb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1047012949

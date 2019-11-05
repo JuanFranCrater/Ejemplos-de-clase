@@ -12,7 +12,6 @@ public class WriteParSecond : MonoBehaviour
    public TextMeshProUGUI textMeshpro;
     int position = 0;   
     char[] textoAEscribirPorCaracter;
-    // Update is called once per frame
     private void Awake()
     {
         textoAEscribirPorCaracter = textoAEscribir.ToCharArray();
@@ -24,7 +23,8 @@ public class WriteParSecond : MonoBehaviour
         {
             textMeshpro.SetText(textMeshpro.text + textoAEscribirPorCaracter[position]);
             position++;
-            yield return new WaitForSeconds(0.09f);
+
+            yield return new WaitForSeconds(0.001f);
             StartCoroutine(escribir());
         }
     }

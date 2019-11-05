@@ -20,6 +20,7 @@ public class GameControl : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+        listadoEnemigos = new List<GameObject>();
     }
 
     internal void addScore(int puntos)
@@ -43,6 +44,7 @@ public class GameControl : MonoBehaviour
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    private List<GameObject> listadoEnemigos;
 
     void Start()
     {
@@ -58,10 +60,16 @@ public class GameControl : MonoBehaviour
             {
                 Vector3 spawnPosition = new Vector3(spawnValues.x, spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
+               listadoEnemigos.Add(Instantiate(hazard, spawnPosition, spawnRotation));
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);
+
+            foreach (GameObject item in listadoEnemigos)
+            {
+                item.GetComponent<Path>().GoToDie();
+            }
+            listadoEnemigos.Clear();
         }
     }
 

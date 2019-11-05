@@ -11,12 +11,13 @@ public class Path : MonoBehaviour
     private Vector3 finalPos;
     private Vector3 targetPos;
     public GameObject[] listadoPositiones;
+    public GameObject positionDissapear;
 
     private void Awake()
     {
-        inititalPos = listadoPositiones[0].transform.position;
-        mediumPos = listadoPositiones[1].transform.position;
-        targetPos = listadoPositiones[2].transform.position;
+        inititalPos = listadoPositiones[Random.Range(0,1)].transform.position;
+        mediumPos = listadoPositiones[Random.Range(2, 4)].transform.position;
+        finalPos = listadoPositiones[Random.Range(5, 6)].transform.position;
     }
     void Start()
     {
@@ -36,7 +37,16 @@ public class Path : MonoBehaviour
             if (transform.position == targetPos)
             {
                 ChangeTargetPos();
+            if (targetPos == positionDissapear.gameObject.transform.position)
+            {
+                Destroy(gameObject);
             }
+            }
+    }
+
+    public void GoToDie()
+    {
+        targetPos = positionDissapear.gameObject.transform.position;
     }
 
     private void ChangeTargetPos()
@@ -52,5 +62,9 @@ public class Path : MonoBehaviour
             targetPos = inititalPos;
         }
 
+    }
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
