@@ -6,7 +6,6 @@ public class onCollisionPowerUp : MonoBehaviour
 {
     public LayerMask layermask;
     public int type;
-    // 1: health, 2: triple, 3: bomb
     void OnTriggerEnter2D(Collider2D col)
     {
         if (layermask == (layermask | (1 << col.gameObject.layer)))

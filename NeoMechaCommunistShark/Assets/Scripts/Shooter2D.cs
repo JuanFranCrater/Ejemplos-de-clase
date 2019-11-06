@@ -5,7 +5,7 @@ public class Shooter2D : MonoBehaviour
 {
 	public float fireSpeed = 5f;
 	public GameObject bulletPrefab;
-    public Transform bulletStart;
+    public Transform[] bulletStart;
 	private bool _canShoot = true;
 	private float _shootTimer;
     public string fireAxis;
@@ -29,8 +29,12 @@ public class Shooter2D : MonoBehaviour
 	{
 		if(_canShoot && (Input.GetAxis(fireAxis) > 0))
 		{
-			Instantiate(bulletPrefab, bulletStart.position, bulletStart.rotation);
-			_canShoot = false;
+
+                for (int i = 0; i < bulletStart.Length; i++)
+                {
+                    Instantiate(bulletPrefab, bulletStart[i].position, bulletStart[i].rotation);
+                }
+                _canShoot = false;
 			_shootTimer += 1/fireSpeed;
 		}
 		if(!_canShoot)
@@ -47,8 +51,11 @@ public class Shooter2D : MonoBehaviour
 	{
 		if(_canShoot)
 		{
-			Instantiate(bulletPrefab, bulletStart.position, bulletStart.rotation);
-			_canShoot = false;
+            for (int i = 0; i < bulletStart.Length; i++)
+            {
+                Instantiate(bulletPrefab, bulletStart[i].position, bulletStart[i].rotation);
+            }
+            _canShoot = false;
 			_shootTimer += 1/fireSpeed;
 		}
 		if(!_canShoot)
