@@ -17,6 +17,7 @@ public class onCollisionPowerUp : MonoBehaviour
                     {
                         col.GetComponent<Health>().AddHealth(1);
                     }
+                    GameControl.instance.addScore(100);
                     break;
                 case 2:
                     GameControl.instance.setTypeBullet(true);

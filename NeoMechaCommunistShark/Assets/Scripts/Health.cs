@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public float currentHealth;
     public Image healthBar;
     public UnityEvent onDie;
+    public UnityEvent onHit;
 
     void Start()
     {
@@ -62,6 +63,7 @@ public class Health : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.fillAmount = GetPercentageHealth();
+            onHit.Invoke(); 
         }
     }
 }

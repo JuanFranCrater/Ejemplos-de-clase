@@ -9,6 +9,7 @@ public class GameControl : MonoBehaviour
     public static GameControl instance;
     public GameObject hasBoomImg;
     public TextMeshProUGUI txtPuntos;
+    public GameObject pointManager;
 
     public TextMeshProUGUI txtTiempo;
 
@@ -28,21 +29,30 @@ public class GameControl : MonoBehaviour
         listadoEnemigos = new List<GameObject>();
     }
 
-    internal void addScore(int puntos)
+    public void addScore(int puntos)
     {
         score = score + puntos;
         txtPuntos.SetText(score + " pts");
+        pointManager.GetComponent<pointManager>().setPoints(score);
     }
 
-    internal void setBoom(bool v)
+    public void setBoom(bool v)
     {
         hasBoom = v;
         hasBoomImg.SetActive(v);
+        if (v)
+        {
+            GameControl.instance.addScore(100);
+        }
     }
 
-    internal void setTypeBullet(bool v)
+    public void setTypeBullet(bool v)
     {
         hasTriple = v;
+        if (v)
+        {
+            GameControl.instance.addScore(100);
+        }
     }
 
     public GameObject[] hazard;
@@ -69,28 +79,28 @@ public class GameControl : MonoBehaviour
                     InitHazard(1, 0, 0);
                     break;
                 case 1:
-                    InitHazard(4, 0, 0);
+                    InitHazard(3, 0, 0);
                     break;
                 case 2:
-                    InitHazard(3, 1, 0);
+                    InitHazard(1, 1, 0);
                     break;
                 case 3:
-                    InitHazard(2, 2, 0);
+                    InitHazard(2, 1, 0);
                     break;
                 case 4:
-                    InitHazard(4, 3, 0);
+                    InitHazard(2, 2, 0);
                     break;
                 case 5:
-                    InitHazard(2, 2, 0);
+                    InitHazard(3, 1, 0);
                     break;
                 case 6:
-                    InitHazard(2, 2, 0);
+                    InitHazard(3, 2, 0);
                     break;
                 case 7:
-                    InitHazard(3, 3, 0);
+                    InitHazard(1, 3, 0);
                     break;
                 case 8:
-                    InitHazard(4, 4, 0);
+                    InitHazard(3, 3, 0);
                     break;
                 case 9:
                     InitHazard(0, 0, 1);
