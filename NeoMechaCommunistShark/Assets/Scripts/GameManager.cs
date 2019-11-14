@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject deathPanel;
     private bool _paused;
+    public AudioSource audio;
 
     private void Start()
     {
@@ -15,9 +16,12 @@ public class GameManager : MonoBehaviour
 
     public void SetPauseGame(bool pause)
     {
-        _paused = pause;
-        Time.timeScale = pause ? 0 : 1;
-        pausePanel.SetActive(pause);
+        if (!deathPanel.active)
+        {
+            _paused = pause;
+            Time.timeScale = pause ? 0 : 1;
+            pausePanel.SetActive(pause);
+        }
     }
 
     private void Update()
@@ -30,6 +34,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = gameOver ? 0 : 1;
         deathPanel.SetActive(gameOver);
+        audio.Stop();
+
     }
 
     private void OnDestroy()

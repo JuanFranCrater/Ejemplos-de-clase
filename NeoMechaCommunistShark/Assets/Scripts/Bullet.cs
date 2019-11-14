@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour {
 
 	public float BulletSpeed;
 	public float LifeTime;
-	public int damage;
+	public float damage;
 	public LayerMask layermask;
 
 	void Start()

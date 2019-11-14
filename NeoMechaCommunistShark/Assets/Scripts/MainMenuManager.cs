@@ -18,6 +18,11 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Inst");
     }
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+   
 
     public void cerrar()
     {

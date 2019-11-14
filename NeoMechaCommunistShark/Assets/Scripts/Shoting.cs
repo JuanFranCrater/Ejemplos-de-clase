@@ -20,8 +20,8 @@ public class Shoting : MonoBehaviour
         if (Input.GetMouseButtonUp(1)&& GameControl.instance.hasBoom)
         {
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("Baddies").Length; i++)
-                GameObject.FindGameObjectsWithTag("Baddies")[i].GetComponent<Health>().Die(); ;
-            GameControl.instance.hasBoom = false;
+                GameObject.FindGameObjectsWithTag("Baddies")[i].GetComponent<Health>().TakeDamage(1000); ;
+            GameControl.instance.setBoom(false);
         }
 
         if (_canShoot && (Input.GetAxis(fireAxis) > 0))

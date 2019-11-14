@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour 
 {
-    public int maxHealth;
-    public int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
     public Image healthBar;
     public UnityEvent onDie;
+    public UnityEvent onHit;
 
     void Start()
     {
@@ -16,14 +17,14 @@ public class Health : MonoBehaviour
         UpdateUIBar();
     }
 
-    public void UpdateHealth(int amount)
+    public void UpdateHealth(float amount)
     {
         currentHealth += amount;
         currentHealth = Mathf.Min(currentHealth, maxHealth);
         UpdateUIBar();
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         UpdateHealth(-amount);
         if (currentHealth <= 0)
@@ -50,10 +51,6 @@ public class Health : MonoBehaviour
     public void Die()
     {
         onDie.Invoke();
-        if (gameObject.tag.Equals("Baddies"))
-        {
-            GameControl.instance.addScore(100);
-        }
     }
 
     public void DestroyObj()
@@ -66,6 +63,7 @@ public class Health : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.fillAmount = GetPercentageHealth();
+            onHit.Invoke(); 
         }
     }
 }

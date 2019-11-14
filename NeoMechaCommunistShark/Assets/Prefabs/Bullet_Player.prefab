@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33494b050d2fa3041914406964f037ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletSpeed: 80
-  LifeTime: 2
+  BulletSpeed: 50
+  LifeTime: 4
   damage: 1
   layermask:
     serializedVersion: 2

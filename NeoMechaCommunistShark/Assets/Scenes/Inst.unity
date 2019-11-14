@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218.99997, y: -275}
-  m_SizeDelta: {x: 362.8, y: 75.9}
+  m_AnchoredPosition: {x: 569.65, y: -392.84003}
+  m_SizeDelta: {x: 1020.7, y: 88.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102944945
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: La Yuki-Bomba, eliminara todos los enemigos en pantalla.
+  m_text: La Yuki-Bomba es de un solo uso, eliminara todos los enemigos en pantalla.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d292ad44d20b524478f0d10495e3a979, type: 2}
   m_sharedMaterial: {fileID: -3356964252452707134, guid: d292ad44d20b524478f0d10495e3a979,
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.3
+  m_fontSize: 44.3
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -245,12 +245,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 102944945}
-    characterCount: 56
+    characterCount: 74
     spriteCount: 0
-    spaceCount: 7
-    wordCount: 8
+    spaceCount: 12
+    wordCount: 13
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -310,8 +310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 197.1, y: -47}
-  m_SizeDelta: {x: 362.8, y: 75.9}
+  m_AnchoredPosition: {x: 376.1, y: -74.1}
+  m_SizeDelta: {x: 720.7, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147508887
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 57.4
+  m_fontSize: 114.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -549,8 +549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218.99997, y: -354.94998}
-  m_SizeDelta: {x: 362.8, y: 75.9}
+  m_AnchoredPosition: {x: 419.63, y: -544.55}
+  m_SizeDelta: {x: 720.7, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495587211
 MonoBehaviour:
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.3
+  m_fontSize: 48.8
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -645,7 +645,7 @@ MonoBehaviour:
     spaceCount: 11
     wordCount: 12
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -744,10 +744,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -809,8 +809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218.99998, y: -123.2}
-  m_SizeDelta: {x: 362.8, y: 75.9}
+  m_AnchoredPosition: {x: 569.63, y: -190.8}
+  m_SizeDelta: {x: 1020.7, y: 102.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705938763
 MonoBehaviour:
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.95
+  m_fontSize: 34.1
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -906,7 +906,7 @@ MonoBehaviour:
     spaceCount: 20
     wordCount: 21
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -966,10 +966,10 @@ RectTransform:
   m_Father: {fileID: 630984600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232, y: -164}
-  m_SizeDelta: {x: 112, y: 112}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -112, y: 84}
+  m_SizeDelta: {x: 224, y: 224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841348831
 MonoBehaviour:
@@ -1095,8 +1095,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 218.99997, y: -199.1}
-  m_SizeDelta: {x: 362.8, y: 75.9}
+  m_AnchoredPosition: {x: 569.65, y: -295.27002}
+  m_SizeDelta: {x: 1020.7, y: 106.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998103793
 MonoBehaviour:
@@ -1116,7 +1116,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Toca los powerups para obtenerlos (vida, triple tiro, yuki-bomba)
+  m_text: Toca los powerups para obtenerlos (vida, triple tiro, yuki-bomba). Obtener
+    un powerup te dara 100 puntos.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d3f9aca1b48b9d8499d0bd3e41655133, type: 2}
   m_sharedMaterial: {fileID: -3356964252452707134, guid: d3f9aca1b48b9d8499d0bd3e41655133,
@@ -1145,7 +1146,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.3
+  m_fontSize: 41.25
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1186,12 +1187,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 998103793}
-    characterCount: 65
+    characterCount: 105
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 15
+    wordCount: 16
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1251,7 +1252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: 11.5}
+  m_AnchoredPosition: {x: 2, y: 19}
   m_SizeDelta: {x: 4, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171902659
@@ -1274,11 +1275,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ebd947f5cac7ea64ebb3fb873e0c660e, type: 3}
-    m_FontSize: 14
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 54
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
