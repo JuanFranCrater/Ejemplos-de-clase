@@ -33,4 +33,7 @@ public class AnimatorBehaviour : MonoBehaviour
         }
 
     }
+    public void doingSound()
+    { 
+    }
 }
