@@ -1,0 +1,5 @@
+- Se pueden repetir letras (Sol:Revisar el GameManager)
+- Uno de los sistemas quita vida nada más empezar (Sol:Revisar max y min de los tres ultimos)
+- Animacion cuando esta fuera de limite no se activa (Sol: No se llama a animator adecuadamente)
+- Faltan iconos (Sol: Hay que hacerlos, solos no se van a hacer)
+- Aumento de velocidad muy tarde en el juego (Sol: Multiplicar el deltaTime en la corrutina cada 1 minuto en vez de 2)

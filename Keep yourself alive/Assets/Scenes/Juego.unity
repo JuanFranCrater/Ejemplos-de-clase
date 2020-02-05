@@ -1459,7 +1459,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2666,6 +2666,16 @@ PrefabInstance:
       propertyPath: difficulty
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5553811439537716501, guid: 00a8f09a3eb69274cb3dd9f60e5f0765,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553811439537716501, guid: 00a8f09a3eb69274cb3dd9f60e5f0765,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 648329504, guid: 00a8f09a3eb69274cb3dd9f60e5f0765, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 57
@@ -3061,7 +3071,7 @@ PrefabInstance:
     - target: {fileID: 5553811439537716501, guid: 00a8f09a3eb69274cb3dd9f60e5f0765,
         type: 3}
       propertyPath: m_FillAmount
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 648329504, guid: 00a8f09a3eb69274cb3dd9f60e5f0765, type: 3}
       propertyPath: m_AnchoredPosition.y
