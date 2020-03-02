@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeaponsData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <item rarity="Common" class="Warrior">
+    <Name>The Unchained Sword</Name>
+    <Stats>
+      <DMG>10</DMG>
+      <STR>5</STR>
+    </Stats>
+    <price>250</price>
+  </item>
+ <item rarity="Epic" class="Mage">
+    <Name>The Holy Staff</Name>
+    <Stats>
+      <DMG>50</DMG>
+      <INT>10</INT>
+    </Stats>
+    <price>6020</price>
+  </item>
+</WeaponsData>

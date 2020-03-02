@@ -1,0 +1,18 @@
+tree("Root")
+	while Succeed()
+		sequence
+			Look()
+			fallback
+				while islookingAtPlayer()
+					sequence
+						Look()
+				tree "Patrol"
+
+tree "Patrol"
+	fallback
+		while
+			isNearPatrolPoint()
+			sequence
+				Wait(0.1)
+				UpdatePatrolIndex()
+		Move()
