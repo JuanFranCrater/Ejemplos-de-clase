@@ -9,6 +9,7 @@ TagManager:
   - Destruible
   - Key
   - Destruye
+  - EndGame
   layers:
   - Default
   - TransparentFX

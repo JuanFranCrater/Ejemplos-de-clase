@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager : EventManager
 {
     public static GameManager instance;
     void Awake()
@@ -13,6 +14,12 @@ public class GameManager : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
     }
+
+    
+    [Header("Audio")]
+    public AudioClip getGem;
+    public AudioClip getKey;
+    public AudioSource _audio;
     [Header ("Green")]
     public GameObject greenKey;
     public GameObject greenGem;
@@ -85,6 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void takeGem(string name)
     {
+        _audio.PlayOneShot(getGem);
         switch (name)
         {
             case "blue":
@@ -101,24 +109,28 @@ public class GameManager : MonoBehaviour
 
     public bool takeKey(string name)
     {
+        
         switch (name)
         {
             case "blue":
                 if (hasBlueGem)
                 {
                     takeBlueKey();
+                    _audio.PlayOneShot(getKey);
                 }
                 return hasBlueGem;
             case "green":
                 if (hasGreenGem)
                 {
                     takeGreenKey();
+                    _audio.PlayOneShot(getKey);
                 }
                 return hasGreenGem;
             case "orange":
                 if (hasOrangeGem)
                 {
                     takeOrangeKey();
+                    _audio.PlayOneShot(getKey);
                 }
                 return hasOrangeGem;
         }

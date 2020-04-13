@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveCharacter : Body, IControlable
 {
     private bool doubleJump = true;
+    public AudioSource _audio;
 
     public void Left()
     {
@@ -21,19 +22,17 @@ public class MoveCharacter : Body, IControlable
         if (groundContact)
         {
             acceleration = jumpPower * Vector2.up;
+            _audio.pitch = UnityEngine.Random.Range(0.5f, 1.5f);
+            _audio.Play();
         }
-        else if (rigthContact)
-        {
-            acceleration = jumpPower * Vector2.up + Vector2.left * jumpPower;
-        }
-        else if (leftContact)
-        {
-            acceleration = jumpPower * Vector2.up + Vector2.right * jumpPower;
-        }
+       
         if (!groundContact && doubleJump)
         {
             acceleration = jumpPower * Vector2.up;
             doubleJump = false;
+            acceleration = jumpPower * Vector2.up;
+            _audio.pitch = UnityEngine.Random.Range(0.5f, 1.5f);
+            _audio.Play();
             StartCoroutine(activateDoubleJump());
         }
 
@@ -107,7 +106,7 @@ public class Body : MonoBehaviour
     {
         var hit = Physics2D.Raycast(transform.position, directionTo);
         bool rayHasImpacted = hit.collider != null;
-        if (rayHasImpacted && hit.collider.gameObject.tag != "Destruye")
+        if (rayHasImpacted && hit.collider.gameObject.tag != "Destruye" && hit.collider.gameObject.tag != "EndGame")
         {
             bool impactDistanceIsLowerThanHalfHeight = hit.distance < colliderHeight;
             if (impactDistanceIsLowerThanHalfHeight)
@@ -149,7 +148,12 @@ public class Body : MonoBehaviour
         {
             if (hit.collider != null && hit.collider.gameObject.tag == "Destruye" && hit.distance < colliderHeight/2)
             {
+                GameManager.instance.goToGameOver();
                 Destroy(gameObject);
+            }
+            if (hit.collider != null && hit.collider.gameObject.tag == "EndGame" && hit.distance < colliderHeight / 2)
+            {
+                GameManager.instance.goToWin();
             }
         }
         return false;
